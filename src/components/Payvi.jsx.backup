@@ -1,0 +1,302 @@
+import React, { useState, useEffect } from 'react';
+import { TrendingUp, PieChart, Target, Sparkles, Users, Heart, Mail, Menu, X, BarChart3, Zap, Shield, Calendar } from 'lucide-react';
+
+function App() {
+  const [activeSection, setActiveSection] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(id);
+      setMobileMenuOpen(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-sm' : 'bg-white'}`}>
+        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-lg"></div>
+            <span className="text-2xl font-bold text-slate-800">Payvi</span>
+          </div>
+          
+          <div className="hidden md:flex items-center gap-8">
+            {['home', 'features', 'how-it-works', 'about', 'contact'].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="text-slate-600 hover:text-slate-900 transition-colors capitalize text-sm"
+              >
+                {item.replace('-', ' ')}
+              </button>
+            ))}
+            <button className="px-5 py-2 text-emerald-600 hover:text-emerald-700 transition-colors text-sm font-medium">
+              Login
+            </button>
+          </div>
+
+          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </nav>
+
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t">
+            <div className="px-6 py-4 flex flex-col gap-4">
+              {['home', 'features', 'how-it-works', 'about', 'contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className="text-slate-600 hover:text-slate-900 transition-colors capitalize text-left"
+                >
+                  {item.replace('-', ' ')}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Hero Section */}
+      <section id="home" className="pt-32 pb-12 px-6 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-bl from-emerald-400 to-teal-500 opacity-20"></div>
+        
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative z-10">
+              <h1 className="text-6xl md:text-7xl font-bold text-slate-900 mb-6 leading-tight">
+                The only app that gets your money into shape
+              </h1>
+              <p className="text-xl text-slate-600 mb-8">
+                Manage money on the go in the app
+              </p>
+              <div className="flex gap-4">
+                <div className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-slate-800 transition-all">
+                  <div className="text-2xl">🍎</div>
+                  <div>
+                    <div className="text-xs">Download on the</div>
+                    <div className="text-sm font-semibold">App Store</div>
+                  </div>
+                </div>
+                <div className="bg-black text-white px-6 py-3 rounded-lg flex items-center gap-2 cursor-pointer hover:bg-slate-800 transition-all">
+                  <div className="text-2xl">▶️</div>
+                  <div>
+                    <div className="text-xs">GET IT ON</div>
+                    <div className="text-sm font-semibold">Google Play</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="relative h-[600px]">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-72 bg-slate-900 rounded-3xl shadow-2xl p-2 z-10">
+                <div className="bg-white rounded-2xl overflow-hidden h-[550px]">
+                  <div className="p-4 border-b">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-xs text-slate-500">AUGUST 2017</div>
+                      <div className="text-xs text-slate-500">SCHEDULED</div>
+                    </div>
+                    <div className="text-center mb-2">
+                      <div className="text-sm text-slate-600 mb-1">Cash Wallet</div>
+                      <div className="text-3xl font-bold text-slate-900">-1,574</div>
+                      <div className="text-xs text-slate-500">Total expenses</div>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 flex items-center justify-center">
+                    <div className="relative w-48 h-48">
+                      <svg viewBox="0 0 100 100" className="transform -rotate-90">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#FCD34D" strokeWidth="15" strokeDasharray="22 78" />
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#EC4899" strokeWidth="15" strokeDasharray="24 76" strokeDashoffset="-22" />
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#3B82F6" strokeWidth="15" strokeDasharray="20 80" strokeDashoffset="-46" />
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#10B981" strokeWidth="15" strokeDasharray="15 85" strokeDashoffset="-66" />
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#EF4444" strokeWidth="15" strokeDasharray="13 87" strokeDashoffset="-81" />
+                      </svg>
+                      <div className="absolute inset-0 flex items-center justify-center flex-col">
+                        <div className="text-2xl font-bold">-937</div>
+                        <div className="text-xs text-slate-500">Avg expenses</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="px-4 pb-4">
+                    <div className="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center text-white">
+                          <Heart size={20} />
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium">Personal</div>
+                          <div className="text-xs text-slate-500">12 transactions</div>
+                        </div>
+                      </div>
+                      <div className="text-red-500 font-semibold">-280 USD</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 px-6 bg-slate-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Why Choose Payvi</h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Experience financial clarity without the complexity
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: <Sparkles className="text-emerald-600" size={32} />,
+                title: 'Spending Awareness',
+                description: 'Understand where your money goes at a glance.',
+                color: 'from-emerald-50 to-teal-50'
+              },
+              {
+                icon: <PieChart className="text-blue-600" size={32} />,
+                title: 'Smart Categorization',
+                description: 'Expenses organized clearly for better visibility.',
+                color: 'from-blue-50 to-cyan-50'
+              },
+              {
+                icon: <Target className="text-yellow-600" size={32} />,
+                title: 'Daily Control',
+                description: 'Mindful spending without complexity.',
+                color: 'from-yellow-50 to-orange-50'
+              },
+              {
+                icon: <Heart className="text-pink-600" size={32} />,
+                title: 'Stress-Free',
+                description: 'Peace of mind in your financial life.',
+                color: 'from-pink-50 to-rose-50'
+              }
+            ].map((benefit, index) => (
+              <div key={index} className={`p-6 rounded-2xl bg-gradient-to-br ${benefit.color} hover:shadow-lg transition-all`}>
+                <div className="mb-4">{benefit.icon}</div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">{benefit.title}</h3>
+                <p className="text-slate-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section id="how-it-works" className="py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">How It Works</h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Simple approach to financial awareness
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                icon: <BarChart3 className="text-white" size={32} />,
+                title: 'Track Daily Activity',
+                description: 'Monitor spending patterns with intuitive overview.',
+                color: 'from-emerald-500 to-teal-500'
+              },
+              {
+                icon: <Zap className="text-white" size={32} />,
+                title: 'View Organized Insights',
+                description: 'Expenses categorized in clear format.',
+                color: 'from-blue-500 to-cyan-500'
+              },
+              {
+                icon: <Shield className="text-white" size={32} />,
+                title: 'Make Informed Decisions',
+                description: 'Use clarity to guide better choices.',
+                color: 'from-purple-500 to-pink-500'
+              }
+            ].map((step, index) => (
+              <div key={index} className="text-center">
+                <div className={`inline-flex items-center justify-center mb-6 w-20 h-20 bg-gradient-to-br ${step.color} rounded-2xl shadow-xl`}>
+                  {step.icon}
+                </div>
+                <h3 className="text-2xl font-semibold text-slate-900 mb-3">{step.title}</h3>
+                <p className="text-slate-600">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 px-6 bg-slate-50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-slate-900 mb-6">About Payvi</h2>
+          <p className="text-xl text-slate-600 mb-8">
+            Making everyday financial awareness simple, calm, and accessible.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: <Users size={32} />, title: 'User Empowerment', color: 'from-emerald-400 to-teal-500' },
+              { icon: <Sparkles size={32} />, title: 'Simplicity', color: 'from-blue-400 to-cyan-500' },
+              { icon: <Heart size={32} />, title: 'Peace of Mind', color: 'from-pink-400 to-rose-500' }
+            ].map((value, i) => (
+              <div key={i} className="p-6">
+                <div className={`inline-flex items-center justify-center mb-4 w-16 h-16 bg-gradient-to-br ${value.color} rounded-2xl text-white`}>
+                  {value.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900">{value.title}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-6 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Get In Touch</h2>
+          </div>
+          <div className="bg-slate-50 rounded-3xl shadow-xl p-8">
+            <div className="space-y-6">
+              <input type="text" className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:outline-none focus:border-emerald-500" placeholder="Your name"/>
+              <input type="email" className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:outline-none focus:border-emerald-500" placeholder="your@email.com"/>
+              <textarea rows="4" className="w-full px-4 py-3 rounded-xl border-2 border-slate-200 focus:outline-none focus:border-emerald-500" placeholder="Your message"/>
+              <button onClick={() => alert('Demo')} className="w-full px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-medium flex items-center justify-center gap-2">
+                <Mail size={20} />
+                Send Message
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-12 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <div className="w-8 h-8 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-lg"></div>
+            <span className="text-xl font-bold">Payvi</span>
+          </div>
+          <p className="text-slate-400">© 2025 Payvi. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;
