@@ -415,7 +415,7 @@ function App() {
             </div>
 
             {/* Visual Element - 3D Greeting */}
-            <div className="hidden lg:block relative z-10 w-full h-full min-h-[500px] flex items-center justify-center">
+            <div className="block relative z-10 w-full h-full min-h-[500px] flex items-center justify-center">
               <Greeting3D darkMode={darkMode} />
             </div>
           </div>
