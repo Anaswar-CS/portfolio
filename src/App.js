@@ -196,8 +196,8 @@ function App() {
       year: '2022 - Present',
       title: 'B.Tech in Computer Science',
       institution: 'Jyothi Engineering College',
-      location: 'Palakkad, Kerala',
-      description: 'CGPA: 7.21/10 | Key Courses: OS, Networks, ML, Ethical Hacking',
+      location: 'Thrissur, Kerala',
+      description: 'CGPA: 7.25/10 | Key Courses: OS, Networks, ML, Ethical Hacking',
       icon: <GraduationCap className="text-blue-400" size={24} />,
       color: 'blue'
     },
