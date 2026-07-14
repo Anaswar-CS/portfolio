@@ -107,19 +107,22 @@ function App() {
 
   const skills = {
     programming: [
-      { name: 'C++', level: 85 },
+      { name: 'Python', level: 85 },
       { name: 'Java', level: 75 },
-      { name: 'Python', level: 70 }
+      { name: 'TypeScript', level: 70 },
+      { name: 'C++', level: 70 },
+      { name: 'SQL', level: 65 }
     ],
     development: [
-      { name: 'Android Studio', level: 80 },
-      { name: 'Web Development', level: 70 },
-      { name: 'Node.js', level: 60 }
+      { name: 'React', level: 80 },
+      { name: 'FastAPI / Node.js', level: 75 },
+      { name: 'Android Studio (Kotlin)', level: 75 },
+      { name: 'REST API Design', level: 75 }
     ],
     aiTools: [
-      { name: 'ChatGPT', level: 85 },
-      { name: 'Gemini AI', level: 80 },
-      { name: 'Machine Learning', level: 70 }
+      { name: 'Machine Learning / Scikit-learn', level: 80 },
+      { name: 'LLM Workflows', level: 75 },
+      { name: 'Computer Vision', level: 65 }
     ],
     softSkills: [
       { name: 'Teamwork', level: 90 },
@@ -130,43 +133,48 @@ function App() {
 
   const projects = [
     {
-      title: 'Android App Development',
-      description: 'Developed a mobile application as part of a team, focusing on user experience and backend integration.',
-      tags: ['Android Studio', 'Java', 'UI/UX'],
-      icon: <Smartphone className="text-emerald-400" size={28} />,
-      gradient: 'from-emerald-500 to-teal-600'
+      title: 'Medical AI Analyzer',
+      description: 'AI-powered web app for early detection of diabetes and cardiac abnormalities — 3 ML models reaching 77.92% accuracy, plus an ECG analyzer classifying 5 heart conditions with OCR-based report parsing.',
+      tags: ['Python', 'Scikit-learn', 'Streamlit', 'OpenCV'],
+      icon: <Target className="text-emerald-400" size={28} />,
+      gradient: 'from-emerald-500 to-teal-600',
+      link: 'https://github.com/Anaswar-CS/disease-prediction',
+      demo: 'https://disease-prediction-pn6xymbshsalbyhr5h4k4v.streamlit.app'
     },
     {
       title: 'FloodGuardX',
-      description: 'IoT-based flood detection system using real-time water-level monitoring sensors, alert automation, and mobile app notification to enhance community safety.',
-      tags: ['IoT', 'Sensors', 'Mobile App', 'Automation'],
+      description: 'Low-cost IoT flood-warning system using ESP32, water-level and rain sensors, automatic power cutoff, an SOS distress button, and a React dashboard for rescue coordination.',
+      tags: ['IoT', 'ESP32', 'React', 'Automation'],
       icon: <Globe className="text-blue-400" size={28} />,
-      gradient: 'from-blue-500 to-cyan-600'
+      gradient: 'from-blue-500 to-cyan-600',
+      link: 'https://github.com/Anaswar-CS/floodguardx-dashboard'
     },
     {
       title: 'Fake Profile Detector',
-      description: 'AI-powered full-stack web app that analyzes profile metadata and content to detect the likelihood of a fake account.',
-      tags: ['AI/ML', 'Full Stack', 'Web App', 'Security'],
+      description: 'Full-stack fake/bot account detector using Logistic Regression with TF-IDF across 30+ signals, achieving 95%+ accuracy with explainable, real-time predictions.',
+      tags: ['React', 'TypeScript', 'FastAPI', 'ML'],
       icon: <Target className="text-purple-400" size={28} />,
-      gradient: 'from-purple-500 to-pink-600'
+      gradient: 'from-purple-500 to-pink-600',
+      link: 'https://github.com/Anaswar-CS/fake-profile-detector'
     },
     {
       title: 'Security Dashboard',
-      description: 'Comprehensive security monitoring dashboard for tracking and analyzing security threats and vulnerabilities in real-time.',
-      tags: ['Dashboard', 'Security', 'Analytics', 'Monitoring'],
+      description: 'Full-stack Flask and JavaScript app tracking 45+ system, security, and network metrics in real time, with a RESTful API, auto-refresh dashboard, and live alerts.',
+      tags: ['Flask', 'JavaScript', 'REST API', 'Monitoring'],
       icon: <Trophy className="text-red-400" size={28} />,
-      gradient: 'from-red-500 to-orange-600'
+      gradient: 'from-red-500 to-orange-600',
+      link: 'https://github.com/Anaswar-CS/security-dashboard'
     },
     {
-      title: 'Productivity App',
-      description: 'Task management and productivity application designed to help users organize their work, track progress, and boost efficiency.',
-      tags: ['Mobile App', 'Productivity', 'Task Management'],
+      title: 'Android App Development',
+      description: 'Developed a mobile application as part of a team, focusing on user experience and backend integration.',
+      tags: ['Android Studio', 'Java', 'UI/UX'],
       icon: <Smartphone className="text-cyan-400" size={28} />,
       gradient: 'from-cyan-500 to-blue-600'
     },
     {
       title: 'NasaFarm-3D Farm Simulation',
-      description: 'Web-based 3D farm simulation game developed for NASA Farm Navigators idea, providing interactive agricultural planning experience.',
+      description: 'Web-based 3D farm simulation game developed for a NASA Farm Navigators concept, providing an interactive agricultural planning experience.',
       tags: ['3D', 'Game Dev', 'Web', 'NASA'],
       icon: <Globe className="text-green-400" size={28} />,
       gradient: 'from-green-500 to-emerald-600'
@@ -633,7 +641,7 @@ function App() {
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mt-auto pt-8 border-t border-slate-200/10 dark:border-white/5">
+                  <div className="flex flex-wrap gap-2 mb-6">
                     {project.tags.map((tag, tagIdx) => (
                       <span
                         key={tagIdx}
@@ -646,6 +654,34 @@ function App() {
                       </span>
                     ))}
                   </div>
+
+                  {(project.link || project.demo) && (
+                    <div className="flex flex-wrap gap-3 mt-auto pt-6 border-t border-slate-200/10 dark:border-white/5">
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl transition-colors ${darkMode
+                            ? 'bg-slate-800 text-white hover:bg-slate-700'
+                            : 'bg-slate-900 text-white hover:bg-slate-800'
+                            }`}
+                        >
+                          <Github size={16} /> View Code
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl bg-emerald-500 text-white hover:bg-emerald-600 transition-colors"
+                        >
+                          <ExternalLink size={16} /> Live Demo
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </motion.div>
               </FadeInSection>
             ))}
