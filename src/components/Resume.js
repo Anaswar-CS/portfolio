@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Globe, Linkedin, Download, ArrowLeft } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Linkedin, Github, Download, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Resume = ({ onBack, darkMode }) => {
@@ -37,7 +37,7 @@ const Resume = ({ onBack, darkMode }) => {
                 <header className="border-b-2 border-slate-800 pb-6 mb-8 print:border-black">
                     <h1 className="text-4xl md:text-5xl font-serif font-bold uppercase tracking-wider mb-2 text-slate-900 dark:text-white print:text-black">Anaswar CS</h1>
                     <h2 className="text-xl font-semibold mb-4 text-slate-700 dark:text-emerald-400 print:text-black">
-                        Aspiring Engineer | Computer Science Student
+                        Building Intelligent Systems • Full-Stack • AI/ML • IoT
                     </h2>
 
                     <div className="flex flex-wrap gap-4 text-sm md:text-base print:text-sm">
@@ -55,11 +55,15 @@ const Resume = ({ onBack, darkMode }) => {
                         </div>
                         <div className="flex items-center gap-2">
                             <Globe size={16} />
-                            <a href="https://anaswarportfolio.craftofolio.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">anaswarportfolio.craftofolio.com</a>
+                            <a href="https://anaswarportfolio.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:underline">anaswarportfolio.netlify.app</a>
                         </div>
                         <div className="flex items-center gap-2">
                             <Linkedin size={16} />
-                            <a href="https://www.linkedin.com/in/anaswar-cs-8649aa286" target="_blank" rel="noopener noreferrer" className="hover:underline">anaswar-cs</a>
+                            <a href="https://www.linkedin.com/in/anaswarcs" target="_blank" rel="noopener noreferrer" className="hover:underline">anaswarcs</a>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <Github size={16} />
+                            <a href="https://github.com/Anaswar-CS" target="_blank" rel="noopener noreferrer" className="hover:underline">Anaswar-CS</a>
                         </div>
                     </div>
                 </header>
@@ -70,10 +74,53 @@ const Resume = ({ onBack, darkMode }) => {
                     <div className="space-y-8">
                         {/* Profile */}
                         <section>
-                            <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Profile</h3>
+                            <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">About</h3>
                             <p className="text-justify leading-relaxed">
-                                Motivated Computer Science Engineering student with hands-on experience in programming, app development, and cybersecurity. Proven teamwork, and a passion for technology-driven solutions.
+                                CSE student with hands-on industry experience building real systems. Work spans AI-powered disease detection, fake-profile analysis, and IoT-based flood-warning infrastructure. Currently contributing to internal product development at Fluxnode Technologies while pursuing a B.Tech at Jyothi Engineering College.
                             </p>
+                        </section>
+
+                        {/* Work Experience */}
+                        <section>
+                            <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Work Experience</h3>
+
+                            <div className="mb-6">
+                                <div className="font-bold text-lg">Project Associate</div>
+                                <div className="font-semibold text-slate-700 dark:text-emerald-400 print:text-black">Fluxnode Technologies Pvt Ltd</div>
+                                <div className="flex justify-between text-sm italic mb-2">
+                                    <span>2025 – Present</span>
+                                    <span>Kerala</span>
+                                </div>
+                                <ul className="list-disc ml-5 space-y-1">
+                                    <li>Contributed to building the company website using HTML, CSS, and JavaScript, collaborating with the product team on core pages and functionality</li>
+                                    <li>Contributed to development of the company's first mobile app using Android Studio, partnering directly with the product lead from concept to internal release</li>
+                                </ul>
+                            </div>
+
+                            <div className="mb-6">
+                                <div className="font-bold text-lg">AI/Edge Computing Intern</div>
+                                <div className="font-semibold text-slate-700 dark:text-emerald-400 print:text-black">V-Robotics Innovations Pvt Ltd</div>
+                                <div className="flex justify-between text-sm italic mb-2">
+                                    <span>Jun 2026 (Summer Internship)</span>
+                                    <span>Palakkad, Kerala</span>
+                                </div>
+                                <ul className="list-disc ml-5 space-y-1">
+                                    <li>Built and benchmarked local LLM deployment pipelines using Ollama and llama.cpp, evaluating models including Qwen3 4B for edge inference performance and accuracy</li>
+                                    <li>Developed PyLM Studio, a custom desktop AI application for local model management, implementing RAG and multimodal AI workflows, and resolving Windows Unicode encoding issues for regional language support</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <div className="font-bold text-lg">Android App Development Intern</div>
+                                <div className="font-semibold text-slate-700 dark:text-emerald-400 print:text-black">ICT Academy</div>
+                                <div className="flex justify-between text-sm italic mb-2">
+                                    <span>Monsoon 2024 (1 Month)</span>
+                                    <span>Kerala</span>
+                                </div>
+                                <ul className="list-disc ml-5 space-y-1">
+                                    <li>Completed a 1-month, hands-on Android training program covering app UI design, activity lifecycles, and core SDK components</li>
+                                </ul>
+                            </div>
                         </section>
 
                         {/* Education */}
@@ -81,42 +128,38 @@ const Resume = ({ onBack, darkMode }) => {
                             <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Education</h3>
 
                             <div className="mb-6">
-                                <div className="font-bold text-lg">B.Tech in Computer Science Engineering</div>
+                                <div className="font-bold text-lg">B.Tech in Computer Science and Engineering</div>
                                 <div className="font-semibold text-slate-700 dark:text-emerald-400 print:text-black">Jyothi Engineering College</div>
                                 <div className="flex justify-between text-sm italic mb-2">
-                                    <span>2023 – Present</span>
-                                    <span>Palakkad, Kerala</span>
+                                    <span>2023 – 2027 (Ongoing)</span>
+                                    <span>Thrissur, Kerala</span>
                                 </div>
                                 <ul className="list-disc ml-5 space-y-1">
-                                    <li><span className="font-bold">CGPA:</span> 7.21/10 (current)</li>
-                                    <li><span className="font-bold">Key Courses:</span> Operating Systems, Computer Networks, Machine Learning, Ethical Hacking, Statistical Analysis</li>
-                                    <li><span className="font-bold">Activities:</span> Coding Club member, technical event organizer, app development project contributor</li>
+                                    <li><span className="font-bold">CGPA:</span> 7.25/10</li>
                                 </ul>
                             </div>
 
                             <div className="mb-6">
-                                <div className="font-bold text-lg">Higher Secondary (Science)</div>
+                                <div className="font-bold text-lg">Higher Secondary (Class XII, Science)</div>
                                 <div className="font-semibold text-slate-700 dark:text-emerald-400 print:text-black">PKHSS Higher Secondary School</div>
                                 <div className="flex justify-between text-sm italic mb-2">
-                                    <span>2020 – 2022</span>
+                                    <span>2021 – 2022</span>
                                     <span>Palakkad, Kerala</span>
                                 </div>
                                 <ul className="list-disc ml-5 space-y-1">
-                                    <li><span className="font-bold">Percentage:</span> 93%</li>
-                                    <li><span className="font-bold">Subjects:</span> Physics, Chemistry, Mathematics, Biology, English, Malayalam</li>
-                                    <li><span className="font-bold">Achievements:</span> Science quiz winner</li>
+                                    <li><span className="font-bold">Score:</span> 93%</li>
                                 </ul>
                             </div>
 
                             <div>
-                                <div className="font-bold text-lg">Secondary Education(Cbse)</div>
+                                <div className="font-bold text-lg">Secondary School (Class X, CBSE)</div>
                                 <div className="font-semibold text-slate-700 dark:text-emerald-400 print:text-black">Bhavans Vidya Mandir Mannapra</div>
                                 <div className="flex justify-between text-sm italic mb-2">
-                                    <span>2021</span>
+                                    <span>2020 – 2021</span>
                                     <span>Palakkad, Kerala</span>
                                 </div>
                                 <ul className="list-disc ml-5 space-y-1">
-                                    <li><span className="font-bold">Percentage:</span> 87%</li>
+                                    <li><span className="font-bold">Score:</span> 87%</li>
                                 </ul>
                             </div>
                         </section>
@@ -126,23 +169,34 @@ const Resume = ({ onBack, darkMode }) => {
                             <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Projects</h3>
 
                             <div className="mb-4">
-                                <div className="font-bold text-lg">1) Android App Development</div>
+                                <div className="font-bold text-lg">Medical AI Analyzer — AI-Powered Disease Detection Web App</div>
+                                <div className="text-sm italic mb-1">github.com/Anaswar-CS/disease-prediction</div>
                                 <ul className="list-disc ml-5 mt-1">
-                                    <li>Developed a mobile application as part of a team, focusing on user experience and backend integration.</li>
+                                    <li>Web app for early detection of diabetes and cardiac abnormalities using Python, Scikit-learn, Streamlit, and OpenCV. Trained 3 ML models reaching 77.92% accuracy on the Pima Indians Diabetes dataset, plus an ECG analyzer classifying 5 heart conditions with OCR-based report parsing</li>
                                 </ul>
                             </div>
 
                             <div className="mb-4">
-                                <div className="font-bold text-lg">2) FloodGuardX – Flood Detection System</div>
+                                <div className="font-bold text-lg">Security Dashboard — Real-Time Security Monitoring Web App</div>
+                                <div className="text-sm italic mb-1">github.com/Anaswar-CS/security-dashboard</div>
                                 <ul className="list-disc ml-5 mt-1">
-                                    <li>Designed and developed an IoT-based flood detection system using real-time water-level monitoring sensors, alert automation, and mobile app notifications to enhance community safety</li>
+                                    <li>Full-stack Flask and JavaScript app tracking 45+ system, security, and network metrics in real time, with a RESTful API, auto-refresh dashboard, and live alerts</li>
+                                </ul>
+                            </div>
+
+                            <div className="mb-4">
+                                <div className="font-bold text-lg">FloodGuardX — IoT-Based Flood Detection System</div>
+                                <div className="text-sm italic mb-1">github.com/Anaswar-CS/floodguardx-dashboard</div>
+                                <ul className="list-disc ml-5 mt-1">
+                                    <li>Low-cost IoT flood-warning system using ESP32, water-level and rain sensors, with automatic power cutoff, an SOS distress button, and a React dashboard for rescue coordination. Built under ₹3,000, scalable to district-level deployment</li>
                                 </ul>
                             </div>
 
                             <div>
-                                <div className="font-bold text-lg">3) Fake Profile Detector — AI-powered Fake Social Media Profile Detection</div>
+                                <div className="font-bold text-lg">Fake Profile Detector — ML-Based Social Media Authenticity Classifier</div>
+                                <div className="text-sm italic mb-1">github.com/Anaswar-CS/fake-profile-detector</div>
                                 <ul className="list-disc ml-5 mt-1">
-                                    <li>Developed a full-stack web app that analyzes profile metadata and content (posts, followers, engagement patterns) to predict the likelihood of a fake account</li>
+                                    <li>Full-stack fake and bot account detector using Logistic Regression with TF-IDF vectorization across 30+ signals (text patterns, engagement metrics, account behavior), achieving 95%+ accuracy with explainable, real-time predictions. Built with React, TypeScript, and FastAPI</li>
                                 </ul>
                             </div>
                         </section>
@@ -154,42 +208,34 @@ const Resume = ({ onBack, darkMode }) => {
                         <section>
                             <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Certifications</h3>
                             <ul className="list-disc ml-5 space-y-2">
-                                <li>Cyber Security(Cisco)</li>
-                                <li>Applied Ethical Hacking, Artificial Intelligence for All (Infosys)</li>
-                                <li>Introduction to Industry 4.0 and Industrial IoT (NPTEL)</li>
-                                <li>Participated as a Galactic Problem Solver for NASA International Space App Challenge</li>
-                                <li>Completed Python course for beginners: Mastering the Essentials (SCALER)</li>
-                                <li>Completed 1-month Monsoon Internship with ICT Academy of Kerala on 'Android App Development'</li>
-                                <li>Successfully completed training course on Full Stack Web Development from (intrnForte)</li>
+                                <li>NIT Calicut — Embedded Systems Workshop (Mar 2025)</li>
+                                <li>Cisco — Cyber Security (Dec 2024)</li>
+                                <li>Infosys — Cyber Security and Applied Ethical Hacking; AI for All (Jun 2025)</li>
+                                <li>NASA International Space Apps Challenge — Galactic Problem Solver (Oct 2025)</li>
+                                <li>NPTEL — Introduction to Industry 4.0 and Industrial IoTs (Jul–Oct 2025)</li>
+                                <li>InternForte — Full Stack Web Development (Jun 2025)</li>
                             </ul>
                         </section>
 
                         {/* Skills */}
                         <section>
-                            <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Skills</h3>
+                            <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Technical Skills</h3>
                             <ul className="list-disc ml-5 space-y-2">
-                                <li><span className="font-bold">Programming:</span> C++, Java</li>
-                                <li><span className="font-bold">App Development:</span> Android Studio</li>
-                                <li><span className="font-bold">Soft Skills:</span> Teamwork, adaptability, communication</li>
+                                <li><span className="font-bold">Programming:</span> Python, Java, TypeScript, SQL, C++</li>
+                                <li><span className="font-bold">Web Development:</span> Node.js, FastAPI, REST APIs, API Design, React, HTML, CSS</li>
+                                <li><span className="font-bold">AI/ML:</span> Machine Learning, Scikit-learn, Computer Vision, Face Recognition, LLM Workflows</li>
+                                <li><span className="font-bold">App Development:</span> Android Studio, Android SDK, Kotlin</li>
+                                <li><span className="font-bold">Tools:</span> Git, GitHub, VS Code, Firebase</li>
                             </ul>
                         </section>
 
-                        {/* Achievements */}
+                        {/* Memberships */}
                         <section>
-                            <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Achievements</h3>
+                            <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Memberships</h3>
                             <ul className="list-disc ml-5 space-y-2">
-                                <li>Made a web-based game for Nasa Farm Navigators idea</li>
-                                <li>Colead member of FOSS club</li>
-                            </ul>
-                        </section>
-
-                        {/* Interests */}
-                        <section>
-                            <h3 className="text-2xl font-serif font-bold uppercase border-b-2 border-slate-800 mb-4 print:border-black text-slate-900 dark:text-white print:text-black">Interests</h3>
-                            <ul className="list-disc ml-5 space-y-2">
-                                <li>Games and fitness</li>
-                                <li>Reading and self-learning</li>
-                                <li>Technology and innovation</li>
+                                <li><span className="font-bold">FOSS Club</span> — Co-lead member; conducted workshops, led open-source initiatives, organized community learning activities</li>
+                                <li><span className="font-bold">CSI</span> — Member of the Computer Society of India, participating in technical events and seminars</li>
+                                <li><span className="font-bold">NDLI Club</span> — Participant in AI and digital literacy workshops</li>
                             </ul>
                         </section>
 
