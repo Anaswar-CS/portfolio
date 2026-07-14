@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# Anaswar C S — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio website built with React, showcasing my work in full-stack development, AI/ML, and IoT as a Computer Science student and Project Associate.
 
-## Available Scripts
+**Live site:** [anaswarportfolio.netlify.app](https://anaswarportfolio.netlify.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 👋 About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+CSE student with hands-on industry experience building real systems — spanning AI-powered disease detection, fake-profile analysis, and IoT-based flood-warning infrastructure. Currently a Project Associate at Fluxnode Technologies, pursuing a B.Tech at Jyothi Engineering College.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 💼 Work Experience
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Project Associate** — Fluxnode Technologies Pvt Ltd *(2025 – Present, Kerala)*
+- Contributed to building the company website using HTML, CSS, and JavaScript, collaborating with the product team on core pages and functionality
+- Contributed to development of the company's first mobile app using Android Studio, partnering directly with the product lead from concept to internal release
 
-### `npm run build`
+**AI/Edge Computing Intern** — V-Robotics Innovations Pvt Ltd *(Jun 2026, Summer Internship, Palakkad)*
+- Built and benchmarked local LLM deployment pipelines using Ollama and llama.cpp, evaluating models including Qwen3 4B for edge inference performance and accuracy
+- Developed PyLM Studio, a custom desktop AI application for local model management, implementing RAG and multimodal AI workflows, and resolving Windows Unicode encoding issues for regional language support
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Android App Development Intern** — ICT Academy *(Monsoon 2024, 1 Month, Kerala)*
+- Completed a hands-on Android training program covering app UI design, activity lifecycles, and core SDK components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Projects
 
-### `npm run eject`
+| Project | Description | Repo |
+|---|---|---|
+| **Medical AI Analyzer** | Web app for early detection of diabetes and cardiac abnormalities using Python, Scikit-learn, Streamlit, and OpenCV. 3 ML models reaching 77.92% accuracy on the Pima Indians Diabetes dataset, plus an ECG analyzer classifying 5 heart conditions with OCR-based report parsing | [disease-prediction](https://github.com/Anaswar-CS/disease-prediction) |
+| **Security Dashboard** | Full-stack Flask and JavaScript app tracking 45+ system, security, and network metrics in real time, with a RESTful API, auto-refresh dashboard, and live alerts | [security-dashboard](https://github.com/Anaswar-CS/security-dashboard) |
+| **FloodGuardX** | Low-cost IoT flood-warning system using ESP32, water-level and rain sensors, automatic power cutoff, an SOS distress button, and a React dashboard for rescue coordination. Built under ₹3,000, scalable to district-level deployment | [floodguardx-dashboard](https://github.com/Anaswar-CS/floodguardx-dashboard) |
+| **Fake Profile Detector** | Full-stack fake/bot account detector using Logistic Regression with TF-IDF vectorization across 30+ signals (text patterns, engagement metrics, account behavior), 95%+ accuracy with explainable, real-time predictions. Built with React, TypeScript, and FastAPI | [fake-profile-detector](https://github.com/Anaswar-CS/fake-profile-detector) |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ Technical Skills
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Programming:** Python, Java, TypeScript, SQL, C++
+- **Web Development:** Node.js, FastAPI, REST APIs, API Design, React, HTML, CSS
+- **AI/ML:** Machine Learning, Scikit-learn, Computer Vision, Face Recognition, LLM Workflows
+- **App Development:** Android Studio, Android SDK, Kotlin
+- **Tools:** Git, GitHub, VS Code, Firebase
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🎓 Education
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **B.Tech in Computer Science and Engineering** — Jyothi Engineering College, Thrissur, Kerala *(2023–2027, Ongoing)* — CGPA: 7.25/10
+- **Higher Secondary (Class XII, Science)** — PKHSS Higher Secondary School, Palakkad, Kerala — 93%
+- **Secondary School (Class X, CBSE)** — Bhavans Vidya Mandir Mannapra, Palakkad, Kerala — 87%
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📜 Certifications
 
-### Code Splitting
+- NIT Calicut — Embedded Systems Workshop *(Mar 2025)*
+- Cisco — Cyber Security *(Dec 2024)*
+- Infosys — Cyber Security and Applied Ethical Hacking; AI for All *(Jun 2025)*
+- NASA International Space Apps Challenge — Galactic Problem Solver *(Oct 2025)*
+- NPTEL — Introduction to Industry 4.0 and Industrial IoTs *(Jul–Oct 2025)*
+- InternForte — Full Stack Web Development *(Jun 2025)*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Memberships
 
-### Analyzing the Bundle Size
+- **FOSS Club** — Co-lead member; conducted workshops, led open-source initiatives, organized community learning activities
+- **CSI** — Member of the Computer Society of India, participating in technical events and seminars
+- **NDLI Club** — Participant in AI and digital literacy workshops
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🗣️ Languages
 
-### Making a Progressive Web App
+English · Malayalam (Native)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🛠️ Built With
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **React 19** — UI framework
+- **Tailwind CSS** — styling
+- **Framer Motion** — scroll and page animations
+- **Lucide React** — icon set
+- **EmailJS** — contact form delivery
+- **React Hot Toast** — notifications
+- **React Intersection Observer** — scroll-based reveal triggers
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 💻 Running Locally
 
-### `npm run build` fails to minify
+```bash
+# Clone the repo
+git clone https://github.com/Anaswar-CS/portfolio.git
+cd portfolio
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Install dependencies
+npm install
+
+# Start the dev server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser. The page reloads automatically as you edit.
+
+### Build for production
+
+```bash
+npm run build
+```
+
+Bundles the app into the `build/` folder, minified and ready to deploy.
+
+---
+
+## 📬 Contact
+
+- **Email:** anaswarcs00@gmail.com
+- **GitHub:** [github.com/Anaswar-CS](https://github.com/Anaswar-CS)
+- **LinkedIn:** [linkedin.com/in/anaswarcs](https://linkedin.com/in/anaswarcs)
+- **Portfolio:** [anaswarportfolio.netlify.app](https://anaswarportfolio.netlify.app/)
