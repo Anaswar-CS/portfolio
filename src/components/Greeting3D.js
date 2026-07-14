@@ -132,15 +132,6 @@ const Greeting3D = ({ darkMode }) => {
 
                 {/* Enhanced Floating Elements */}
                 <motion.div
-                    style={{ translateZ: 60, rotateX: useTransform(rotateX, r => -r), rotateY: useTransform(rotateY, r => -r) }} // Counter-rotate to keep upright
-                    className={`absolute -right-6 top-16 px-6 py-4 rounded-2xl backdrop-blur-xl border border-white/20 shadow-2xl
-    ${darkMode ? 'bg-slate-900/60 text-white' : 'bg-white/60 text-slate-800'}
-  `}
-                >
-                    <span className="text-4xl filter drop-shadow-lg">👋</span>
-                </motion.div>
-
-                <motion.div
                     style={{ translateZ: 80, rotateX: useTransform(rotateX, r => -r * 0.5), rotateY: useTransform(rotateY, r => -r * 0.5) }}
                     className={`absolute -left-6 bottom-24 px-6 py-4 rounded-2xl backdrop-blur-xl border border-white/20 shadow-2xl
     ${darkMode ? 'bg-slate-900/60 text-white' : 'bg-white/60 text-slate-800'}

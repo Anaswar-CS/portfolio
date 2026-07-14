@@ -362,7 +362,7 @@ function App() {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
                 className={`text-lg md:text-xl ${darkMode ? 'text-slate-400' : 'text-slate-600'} mb-12 leading-relaxed max-w-xl`}
               >
-                B.Tech student at Jyothi Engineering College with hands-on experience in programming, app development, and cybersecurity. Proven teamwork and a passion for technology innovation.
+                B.Tech student at Jyothi Engineering College with hands-on experience building AI/ML, full-stack, and IoT systems. Proven teamwork and a passion for technology innovation.
               </motion.p>
 
               <motion.div
@@ -457,7 +457,7 @@ function App() {
                       Profile
                     </h3>
                     <p className={`text-lg ${darkMode ? 'text-slate-300' : 'text-slate-700'} leading-relaxed font-light`}>
-                      Motivated Computer Science Engineering student with hands-on experience in programming, app development, and cybersecurity. Proven teamwork, and a passion for technology innovation.
+                      CSE student with hands-on industry experience building real systems — spanning AI-powered disease detection, fake-profile analysis, and IoT-based flood-warning infrastructure. Proven teamwork, and a passion for technology innovation.
                     </p>
                   </div>
 
